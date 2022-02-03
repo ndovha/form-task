@@ -1,4 +1,5 @@
-import FormComponent from './components/form/form.component';
+import FormComponent from './pages/form/form.component';
+
 function App() {
   return (
     <div >

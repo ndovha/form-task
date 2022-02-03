@@ -8,6 +8,8 @@ const Global = createGlobalStyle`
 * {
   margin: 0px;
   padding: 0px;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   background: #FFFFFF;
   font-family: Apercu Arabic Pro;
@@ -18,8 +20,8 @@ const Global = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <Global/>
-    <App />
+      <Global/>
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
