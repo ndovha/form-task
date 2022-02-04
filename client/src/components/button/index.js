@@ -1,4 +1,5 @@
 import React from 'react';
+import { Send } from './style';
 
 
 export default function Button({
@@ -8,12 +9,12 @@ export default function Button({
   text,
 }) {
   return (
-    <button
+    <Send
       id={id}
       type={submit ? 'submit' : 'button'}
       onClick={onClick}
     >
       {text}
-    </button>
+    </Send>
   )
 }

@@ -1,9 +1,14 @@
 import React from 'react';
 import Input from '../../components/input';
+import Textarea from '../../components/textarea/insex';
 import Button from '../../components/button';
 import { REQUIRED, IS_EMAIL, validate } from './form-validation';
-import { Wrapper, WrapperForm, Title, Form, WrapperMap, ImageMap, Div } from './style.components';
+import { Wrapper, WrapperForm,CloudForm,Smile2,CloudWrapper1,RedCartoon, Title, Form, WrapperMap, ImageMap, Div, Smile1 } from './style.components';
 import axios from 'axios';
+import smile1 from '../../assets/images/smile1.svg';
+import cloud1 from '../../assets/images/cloud.svg';
+import red_cartoon3 from '../../assets/images/red_cartoon3.svg';
+import smile2 from '../../assets/images/goodie1.svg';
 
 export default class FormComponent extends React.Component {
     state = {
@@ -43,6 +48,7 @@ export default class FormComponent extends React.Component {
     const nameErrorKey = validate(name.value, name.validationList);    
     const emailErrorKey = validate(email.value, email.validationList);
     const messageErrorKey = validate(message.value, message.validationList);
+    console.log(emailErrorKey)
        if (nameErrorKey || emailErrorKey || messageErrorKey) {      
          return this.setState((state) => ({
            name: {
@@ -78,11 +84,22 @@ export default class FormComponent extends React.Component {
       
     return (
       <Wrapper>
+        <CloudWrapper1>
+          <img src={cloud1}></img>
+        </CloudWrapper1>
+        <Smile1>
+          <img src={smile1}></img>
+        </Smile1>
         <WrapperForm>
+          <RedCartoon>
+            <img src={red_cartoon3} />
+          </RedCartoon>
+          <Smile2>
+            <img src={smile2} />
+          </Smile2>
           <Title>Reach out to us!</Title>
           <Div>
             <Input
-              // className={name.error ? 'std-field__input--error' : 'std-field__input'}
               type='text'
               placeholder='Your name*'
               value={name.value}
@@ -90,19 +107,20 @@ export default class FormComponent extends React.Component {
               error={name.error}
             />
             <Input
-              // className={password.error ? 'std-field__input--error' : 'std-field__input'}
               type='text'
               placeholder='Your e-mail*'
               value={email.value}
               onChange={this.handleEmailChange}
               error={email.error}
             />
-            <Input
+            <Textarea
               type='text'
               placeholder='Your message*'
               value={message.value}
               onChange={this.handleMessageChange}
               error={message.error}
+              rows={'4'}
+              cols={'10'}
             />
             <Button
               text='Send message'
@@ -110,10 +128,10 @@ export default class FormComponent extends React.Component {
               onClick={this.handleSend}
             />
           </Div>
+          <CloudForm>
+            <img src={cloud1}></img>
+          </CloudForm>
         </WrapperForm>
-        <WrapperMap>
-          <ImageMap></ImageMap>
-        </WrapperMap>
       </Wrapper>
     );
 } }

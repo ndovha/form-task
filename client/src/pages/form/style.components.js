@@ -1,72 +1,61 @@
 import styled from 'styled-components';
-import map from '../../assets/images/map.png';
+import map from '../../assets/images/map2.png';
 
 export const Wrapper = styled.div`
+    position: relative;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 90%;
-    `
+    padding: 180px 145px;
+    background: transparent url(${map}) right center/contain no-repeat;
+`
 
 export const WrapperForm = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
     width: 100%;
-    height: 90%;
-    `
+    max-width: 570px;
+`
 
 export const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 70%;
-    justify-content: space-around;
-`;
+   position: relative;
+   z-index: 1;
+`
 
 export const Title = styled.h2`
-    width: 563px;
-    height: 58px;
     font-size: 40px;
-    line-height: 130%;
+    font-weight: 400;
+    line-height: 1.3;
     color: #3E3E3E;
-    `
-export const WrapperMap = styled.div`
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
+    margin-bottom: 30px;
 `
 
-export const ImageMap = styled.div`
-    display: flex;
-    /* justify-content: end; */
-    background: no-repeat center/80% url(${map});
-    background-size: cover;
-    /* background: url('../../'); */
-    width: 100%;
-    /* height: 100%; */
-  /* border-radius: 50%; */
-  /* border-top-left-radius: 100%;  */
- /* border-bottom-left-radius: 100%; */
-  /* overflow: hidden; */
-    /* top: -52px; */
-        
+export const Smile1 = styled.div`
+    position: absolute;
+    top: 40px;
+    left: 46px;
+
 `
-export const Image = styled.img`
-/* position: absolute;
-border-bottom-left-radius: 90%;
-border-top-left-radius: 90%;
-height: 90%;
-width: 45%; */
-/* width:50%;
-height: 100%; */
-/* transform: translate(20%, 0%); */
-/* border-radius: 100% 0 0 100%; */
-/* margin-top: -5%; */
-/* border-radius: 50%; */
-/* border-radius: 100%  0 0 100%; */
-/* transform: translate(-50%, -50%); */
-/* border-bottom-left-radius: 100%; */
-/* border-radius: 50% 0% 0% 50%; */
+
+export const CloudForm = styled.div`
+    position: absolute;
+    left: 35%;
+    bottom: -34px;
+    z-index: -1;
+`
+export const CloudWrapper1 = styled.div`
+    position: absolute;
+    left: -95px;
+    top: 50%;
+    transform: translate(0, -50%);
+`
+
+export const RedCartoon = styled.div`
+    right: -64%;
+    position: absolute;
+    bottom: -100px;
+`
+
+export const Smile2 = styled.div`
+    right: -34%;
+    position: absolute;
+    bottom: 115px;
+    z-index: 2;
 `
