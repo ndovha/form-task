@@ -5,7 +5,7 @@ class FeedbackController {
         const { name, email, message } = req.body;
         const newFeedback = await db.query('INSERT INTO feedback ( name, email, message) values ($1, $2, $3) RETURNING *',
         [ name, email, message])
-        res.json(newFeedback)
+       res.json(newFeedback.rows[0])
         
     }
     async getFeedback(req, res) {
