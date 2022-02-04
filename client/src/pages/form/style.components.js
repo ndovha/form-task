@@ -11,14 +11,17 @@ export const Wrapper = styled.div`
 export const WrapperForm = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
     `
 
 export const Div = styled.div`
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 90%;
     height: 70%;
+    justify-content: space-around;
 `;
 
 export const Title = styled.h2`
